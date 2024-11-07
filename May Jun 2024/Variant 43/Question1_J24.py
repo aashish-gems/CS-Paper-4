@@ -5,8 +5,7 @@ DataSorted = [-1] * 20  # Array[0:19] of Integer
 
 # 1b
 def Initialise():
-    global DataSorted
-    global NumberItems
+    global DataSorted, NumberItems
     YourQuantity = 0  # Integer
     while YourQuantity < 1 or YourQuantity > 20:
         YourQuantity = int(input("Enter quantity of numbers (1 to 20): "))
@@ -25,8 +24,7 @@ for CountBefore in range(NumberItems):
 
 # 1d i
 def BubbleSort():
-    global NumberItems
-    global DataSorted
+    global DataSorted, NumberItems
     NoMoreSwaps = False  # Boolean
     LastIndex = NumberItems  # Integer
     while not NoMoreSwaps:
@@ -49,8 +47,7 @@ for CountAfter in range(NumberItems):
 
 # 1e i
 def BinarySearch(DataToFind):  # Integer
-    global NumberItems
-    global DataSorted
+    global DataSorted, NumberItems
     Lower = 0  # Integer
     Upper = NumberItems - 1  # Integer
     while True:

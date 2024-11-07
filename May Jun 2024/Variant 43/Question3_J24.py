@@ -6,9 +6,7 @@ QueueTail = -1  # Global Integer
 
 # 3b
 def Enqueue(DataToAdd):  # String
-    global QueueTail
-    global QueueHead
-    global QueueData
+    global QueueTail, QueueHead, QueueData
     if QueueTail < 19:
         QueueTail += 1
         QueueData[QueueTail] = DataToAdd
@@ -20,9 +18,7 @@ def Enqueue(DataToAdd):  # String
 
 # 3c
 def Dequeue():
-    global QueueTail
-    global QueueHead
-    global QueueData
+    global QueueTail, QueueHead, QueueData
     if QueueHead > QueueTail or QueueHead == -1:
         return "false"
     else:

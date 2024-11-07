@@ -6,9 +6,7 @@ TailPointer = 0  # Global Integer
 
 # 2a ii
 def Enqueue(DataToAdd):
-    global Queue
-    global HeadPointer
-    global TailPointer
+    global Queue, HeadPointer, TailPointer
     if not(TailPointer < 50):
         print("Queue is full")
     else:
@@ -20,9 +18,7 @@ def Enqueue(DataToAdd):
 
 # 2a iii
 def Dequeue():
-    global Queue
-    global HeadPointer
-    global TailPointer
+    global Queue, HeadPointer, TailPointer
     if HeadPointer == -1 or HeadPointer > 49:
         print("Queue is empty")
         return "Empty"
@@ -59,8 +55,7 @@ NumberRecords = 0  # Global Integer
 
 # 2c iii
 def TotalData():
-    global Records
-    global NumberRecords
+    global Records, NumberRecords
     # DataAccessed: String
     # Flag: Boolean
     DataAccessed = Dequeue()
@@ -81,8 +76,7 @@ def TotalData():
 
 # 2d
 def OutputRecords():
-    global Records
-    global NumberRecords
+    global Records, NumberRecords
     for Index in range(NumberRecords):
         print("ID: ", Records[Index].ID, "   Total: ", Records[Index].Total)
 

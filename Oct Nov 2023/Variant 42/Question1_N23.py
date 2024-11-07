@@ -9,10 +9,7 @@ ConsonantTop = 0  # Global Integer
 
 # 1b i
 def PushData(DataToPush):
-    global StackVowel
-    global StackConsonant
-    global VowelTop
-    global ConsonantTop
+    global StackVowel, StackConsonant, VowelTop, ConsonantTop
     if DataToPush == "a" or DataToPush == "e" or DataToPush == "i" or DataToPush == "o" or DataToPush == "u":
         if VowelTop < 100:
             StackVowel[VowelTop] = DataToPush
@@ -42,8 +39,7 @@ def ReadData():
 
 # 1c
 def PopVowel():
-    global StackVowel
-    global VowelTop
+    global StackVowel, VowelTop
     if VowelTop > 0:
         VowelTop -= 1
         return StackVowel[VowelTop]
@@ -51,8 +47,7 @@ def PopVowel():
 
 
 def PopConsonant():
-    global StackConsonant
-    global ConsonantTop
+    global StackConsonant, ConsonantTop
     if ConsonantTop > 0:
         ConsonantTop -= 1
         return StackConsonant[ConsonantTop]

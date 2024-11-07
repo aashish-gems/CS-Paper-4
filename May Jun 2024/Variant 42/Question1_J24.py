@@ -4,8 +4,7 @@ NumberOfWords = -1  # Global Integer
 
 # 1c i
 def Play():
-    global WordArray
-    global NumberOfWords
+    global WordArray, NumberOfWords
     print("Main word is", WordArray[0])
     YourAnswer = ""  # String
     CorrectAnswers = 0  # Integer
@@ -33,8 +32,7 @@ def Play():
 
 # 1a
 def ReadWords(FileName):
-    global WordArray
-    global NumberOfWords
+    global WordArray, NumberOfWords
     try:
         ThisFile = open(FileName, "r")
         ThisLine = (ThisFile.readline()).strip()
